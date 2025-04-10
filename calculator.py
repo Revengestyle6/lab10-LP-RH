@@ -27,7 +27,7 @@ def square_root(a):
     else:
         math.sqrt(a)# raise ValueError if a < 0
 def hypotenuse(a, b):
-    math.hypot(a, b) # can have negative nums
+    return math.hypot(a, b) # can have negative nums
 def subtract(a, b):
     return a - b
 def logarithm(a, b):# use math library/raise ValueError

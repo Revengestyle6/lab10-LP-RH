@@ -7,7 +7,7 @@ from calculator import *
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
     def test_add(self): # 3 assertions
-        self.assertEqual(add(3, 5, 8))
+        self.assertEqual(add(3, 5), 8)
         self.assertEqual(add(4, 8), 12)
         self.assertEqual(add(9, 7), 16)
 
@@ -26,9 +26,9 @@ class TestCalculator(unittest.TestCase):
     #     fill in code
 
     def test_divide(self): # 3 assertions
-        self.assertAlmostEqual(div(6,3),2)
-        self.assertAlmostEqual(div(150, 50), 3)
-        self.assertAlmostEqual(div(6000, 1000), 6)
+        self.assertAlmostEqual(div(3,6),2)
+        self.assertAlmostEqual(div(50, 150), 3)
+        self.assertAlmostEqual(div(1000, 6000), 6)
     #     fill in code
     # ##########################
 
@@ -42,11 +42,11 @@ class TestCalculator(unittest.TestCase):
 
     def test_logarithm(self): # 3 assertions
         self.assertEqual(logarithm(10, 10), 1)
-        self.assertEqual(logarithm(8, 2), 3)
-        self.assertEqual(logarithm(100, 10), 2)
+        self.assertEqual(logarithm(2, 8), 3)
+        self.assertEqual(logarithm(10, 100), 2)
 
     def test_log_invalid_base(self): # 1 assertion
-        with self.assertRaise(ValueError):
+        with self.assertRaises(ValueError):
             logarithm(5, 0)
     # ##########################
     
@@ -59,8 +59,8 @@ class TestCalculator(unittest.TestCase):
 
     def test_hypotenuse(self): # 3 assertions
         self.assertEqual(hypotenuse(3,4),5)
-        self.assertEqual(hypotenuse(7, 9), 12)
-        self.assertEqual(hypotenuse(1,1),1)
+        self.assertEqual(hypotenuse(12, 16), 20)
+        self.assertEqual(hypotenuse(5,12),13)
     #     fill in code
 
     def test_sqrt(self): # 3 assertions
