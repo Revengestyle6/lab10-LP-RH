@@ -1,4 +1,6 @@
 # GitHub Link: https://github.com/Revengestyle6/lab10-LP-RH.git
+# Partner 1: Lawrence P.
+# Partner 2: Ritesh H.
 """
 calculator.py
 - Defines functions used to create a simple calculator
