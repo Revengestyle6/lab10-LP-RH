@@ -14,12 +14,12 @@ def subtract(a, b):
 def multiply(a, b):
     return a*b
 def divide(a, b):  # raise ZeroDivisionError if a == 0
-    if b == 0:
+    if a == 0:
         raise ZeroDivisionError
     else:
-        return a/b
+        return b/a
 def logarithm(a, b):# use math library/raise ValueError
-    if b <= 0:
+    if b <= 0 or a <= 0:
         raise ValueError
     else:
         return math.log(b,a)
