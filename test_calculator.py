@@ -1,4 +1,6 @@
 # GitHub Link: https://github.com/Revengestyle6/lab10-LP-RH.git
+# Partner 1: Lawrence P.
+# Partner 2: Ritesh H.
 import unittest
 from calculator import *
 
@@ -11,16 +13,22 @@ class TestCalculator(unittest.TestCase):
 
 
     def test_subtract(self): # 3 assertions
-        self.assertEqual(sub(8, 6), 2)
-        self.assertEqual(sub(5, 3), 2)
-        self.assertEqual(sub(9, 7), 2)
+        self.assertEqual(subtract(8, 6), 2)
+        self.assertEqual(subtract(5, 3), 2)
+        self.assertEqual(subtract(9, 7), 2)
 
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
+    def test_multiply(self): # 3 assertions
+        self.assertAlmostEqual(mul(2,3),6)
+        self.assertAlmostEqual(mul(42, 7), 294)
+        self.assertAlmostEqual(mul(10, 12), 120)
     #     fill in code
 
-    # def test_divide(self): # 3 assertions
+    def test_divide(self): # 3 assertions
+        self.assertAlmostEqual(div(6,3),2)
+        self.assertAlmostEqual(div(150, 50), 3)
+        self.assertAlmostEqual(div(6000, 1000), 6)
     #     fill in code
     # ##########################
 
@@ -30,30 +38,38 @@ class TestCalculator(unittest.TestCase):
             div(0, 5)
 
 
+    #     fill in code
+
     def test_logarithm(self): # 3 assertions
-        self.assertEqual(log(10, 10), 1)
-        self.assertEqual(log(8, 2), 3)
-        self.assertEqual(log(100, 10), 2)
+        self.assertEqual(logarithm(10, 10), 1)
+        self.assertEqual(logarithm(8, 2), 3)
+        self.assertEqual(logarithm(100, 10), 2)
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaise(ValueError):
-            log(5, 0)
+            logarithm(5, 0)
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
+    def test_log_invalid_argument(self): # 1 assertion
     #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
+        with self.assertRaises(ValueError):
+            logarithm(0, 5)
     #     fill in code
 
-    # def test_hypotenuse(self): # 3 assertions
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(hypotenuse(3,4),5)
+        self.assertEqual(hypotenuse(7, 9), 12)
+        self.assertEqual(hypotenuse(1,1),1)
     #     fill in code
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
+    def test_sqrt(self): # 3 assertions
+        with self.assertRaises(ValueError):
+            square_root(-1)
+        with self.assertRaises(ValueError):
+            square_root(-32)
+        with self.assertRaises(ValueError):
+            square_root(-5003)
     #     # Test basic function
     #     fill in code
     ##########################
